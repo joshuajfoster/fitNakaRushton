@@ -1,4 +1,4 @@
-# fitNakaRushton
+# fit_naka_rushton
 
 A simple Python module for fitting a Naka-Rushton function to data
 
