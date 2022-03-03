@@ -77,7 +77,7 @@ def computeC50(b,Gr,Gc,n):
     return C50
 
 
-def fitNakaRushton(contrast,resp):
+def fitNakaRushton(contrast,resp,lower_bounds=[-10,0,0,0.1],upper_bounds=[10,10,100,10]):
     """
     fit Naka-Rushton function to data
 
@@ -93,10 +93,7 @@ def fitNakaRushton(contrast,resp):
     """
     
     from scipy.optimize import curve_fit
-    
-    lower_bounds = [-10,0,0,0.1]
-    upper_bounds = [10,10,100,10]
-   
+       
     popt, pcov = curve_fit(NakaRushton, contrast, resp, bounds = (lower_bounds,upper_bounds))
     
     b = popt[0]
