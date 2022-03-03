@@ -85,6 +85,11 @@ def fitNakaRushton(contrast,resp,init_params=[0,1,50,3],lower_bounds=[-10,0,0,0.
     ----------
     contrast (numpy array): vector of contrast values
     resp (numpy array): vector of response values
+    
+    OPTIONAL ARGS:
+    init_params (list): initial guessing for params [b,Gr,Gc,n]
+    lower_bounds (list): parameter lower bounds [b,Gr,Gc,n]
+    upper_bounds (list): parameter upper bounds [b,Gr,Gc,n]
 
     Returns
     -------
